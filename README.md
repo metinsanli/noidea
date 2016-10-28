@@ -1,0 +1,2 @@
+# noidea
+Ornek Java kodlari.
