@@ -1,0 +1,8 @@
+RUN:
+	mvn jetty:run
+
+WEB ADDRESS:
+	http://localhost:8080/appservlet
+
+WAR PACKAGE:
+	mvn package
