@@ -1,0 +1,18 @@
+javafx-maven
+|---pom.xml
+|---run.bat
+|---tree.txt
+\---src
+    \---main
+        +---java
+        |   \---org
+        |       \---sadekod
+        |           \---jfx
+        |               |---App.java
+        |               \---controller
+        |                     |---MainWindowController.java
+        |
+        |
+        \---resource
+            \---fxml
+                 |---MainWindow.fxml
