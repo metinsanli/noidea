@@ -1,0 +1,48 @@
+java server faces:
+
+	proje oluşturmak :
+	mvn archetype:generate -DgroupId=org.sadekod -DartifactId=webapp01 -DarchetypeArtifactId=maven-archetype-webapp -DinteractiveMode=false
+	eğer eclipse'te çalışılacaksa : mvn eclipse:eclipse -Dwtpversion=2.0
+
+	managed bean:
+	jsf sayfaları tarafından okunabilen (get/set methodları çağırılabilen) java sınıflarıdır. Bu methodalara html form değerleri verilebilir ve üretülen yeni değerler html sayfalarında göserilebilir/kullanılabilir. tabi bean sınıfarını html sayfalarında çağrabilmek için bazı gereksinimler/kofigüsrasyonlar vardır. bu konfigüsrasyon sınıf içinden annotation kullanılarak veya faces-config.xml dosyası ile isteğe baplı olarak 2 farklı şekilde yapılabilir.
+	
+	faces-config.xml ile :
+	
+	<?xml version="1.0" encoding="UTF-8"?>
+	<faces-config
+		xmlns="http://java.sun.com/xml/ns/javaee"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+		http://java.sun.com/xml/ns/javaee/web-facesconfig_2_0.xsd"
+		version="2.0">
+		<managed-bean> -->>[A]
+		  <managed-bean-name>helloBean</managed-bean-name>
+		  <managed-bean-class>com.mkyong.common.HelloBean</managed-bean-class>
+		  <managed-bean-scope>session</managed-bean-scope> -->>[B]
+		 </managed-bean>
+	</faces-config>
+	
+	annotation kullanarak :
+	
+	package com.mkyong.common;
+	import javax.faces.bean.ManagedBean;
+	import javax.faces.bean.SessionScoped;
+	import java.io.Serializable;
+
+	@ManagedBean -->>[A]
+	@SessionScoped -->>[B]
+	public class HelloBean implements Serializable {
+
+		private static final long serialVersionUID = 1L;
+
+		private String name;
+
+		public String getName() {
+			return name;
+		}
+
+		public void setName(String name) {
+			this.name = name;
+		}
+	}

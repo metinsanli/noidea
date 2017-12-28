@@ -1,0 +1,28 @@
+
+|   deploy.bat
+|   not.txt
+|   pom.xml
+|   tree.txt
+|   
+\---src
+    \---main
+        +---java
+        |   \---org
+        |       \---sadekod
+        |           \---web
+        |                   PageAController.java
+        |                   
+        +---resources
+        \---webapp
+            |   PageA.xhtml
+            |   
+            +---resources
+            |   +---css
+            |   +---images
+            |   |       logo-java.png
+            |   |       sofa.png
+            |   |       
+            |   \---js
+            \---WEB-INF
+                    PageA-beans.xml
+                    web.xml
