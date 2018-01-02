@@ -1,0 +1,25 @@
+Folder PATH listing for volume OS
+Volume serial number is 10EA-6D13
+C:.
+|   not.txt
+|   pom.xml
+|   run.bat
+|   tree.txt
+|   
++---src
+|   \---main
+|       +---java
+|       |   \---org
+|       |       \---sadekod
+|       |           \---webapp
+|       |                   Sample.java
+|       |                   
+|       +---resource
+|       |   \---config
+|       |           tr.test.conf
+|       |           
+|       \---webapp
+|           |   index.jsp
+|           |   
+|           \---WEB-INF
+|                   web.xml
